@@ -41,5 +41,6 @@
 @property(retain) NSString* outVFile;
 
 - (Boolean) transcodeStart;
+- (void) dummyTask;
 
 @end
