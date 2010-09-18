@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	089C165DFE840E0CC02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {675, 884}}";
+			sepNavSelRange = "{45, 0}";
+			sepNavVisRange = "{0, 45}";
+		};
+	};
+	256AC3D80F4B6AC300CF3369 /* ffmpegGuiAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {732, 648}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 316}";
+		};
+	};
+	256AC3D90F4B6AC300CF3369 /* ffmpegGuiAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {732, 648}}";
+			sepNavSelRange = "{371, 0}";
+			sepNavVisRange = "{0, 371}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecturePreference = i386;
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 9E10C1DB12436D3F0096D777 /* ffmpegGui */;
+		activeTarget = 8D1107260486CEB800E47090 /* ffmpegGui */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* ffmpegGui */,
+		);
+		breakpoints = (
+			9E10C3741243A99E0096D777 /* FFmpegGui.m:19 */,
+			9E10C37C1243A9F00096D777 /* FFmpegController.m:20 */,
+			9E10C4021243B2C80096D777 /* FFmpegController.m:31 */,
+			9E3A56741243FC3D00D49D2F /* FFmpegController.m:46 */,
+			9E3A573A124415DB00D49D2F /* FFmpegController.m:47 */,
+		);
+		codeSenseManager = 9E10C1F912436D570096D777 /* Code sense */;
+		executables = (
+			9E10C1DB12436D3F0096D777 /* ffmpegGui */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					198,
+					20,
+					99,
+					99,
+					29,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					385,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					554,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 306515918;
+			PBXWorkspaceStateSaveDate = 306515918;
+		};
+		perUserProjectItems = {
+			9E10C20E124373830096D777 /* PBXTextBookmark */ = 9E10C20E124373830096D777 /* PBXTextBookmark */;
+			9E10C2DF12438ED20096D777 /* PBXTextBookmark */ = 9E10C2DF12438ED20096D777 /* PBXTextBookmark */;
+			9E10C36B1243A96F0096D777 /* PBXTextBookmark */ = 9E10C36B1243A96F0096D777 /* PBXTextBookmark */;
+			9E10C3CB1243AFBA0096D777 /* PBXTextBookmark */ = 9E10C3CB1243AFBA0096D777 /* PBXTextBookmark */;
+			9E10C42B1243D8470096D777 /* PBXTextBookmark */ = 9E10C42B1243D8470096D777 /* PBXTextBookmark */;
+			9E6FD0701245111600F213A0 /* PBXTextBookmark */ = 9E6FD0701245111600F213A0 /* PBXTextBookmark */;
+			9E6FD0711245111600F213A0 /* PBXTextBookmark */ = 9E6FD0711245111600F213A0 /* PBXTextBookmark */;
+			9E6FD0721245111600F213A0 /* PBXTextBookmark */ = 9E6FD0721245111600F213A0 /* PBXTextBookmark */;
+			9E6FD0731245111600F213A0 /* PBXTextBookmark */ = 9E6FD0731245111600F213A0 /* PBXTextBookmark */;
+			9E6FD0741245111600F213A0 /* PBXTextBookmark */ = 9E6FD0741245111600F213A0 /* PBXTextBookmark */;
+			9E6FD0751245111600F213A0 /* PBXTextBookmark */ = 9E6FD0751245111600F213A0 /* PBXTextBookmark */;
+			9E6FD0781245111600F213A0 /* PBXTextBookmark */ = 9E6FD0781245111600F213A0 /* PBXTextBookmark */;
+			9E6FD0791245111600F213A0 /* PBXTextBookmark */ = 9E6FD0791245111600F213A0 /* PBXTextBookmark */;
+			9EEE47AB12450EF10091C71A /* PBXTextBookmark */ = 9EEE47AB12450EF10091C71A /* PBXTextBookmark */;
+		};
+		sourceControlManager = 9E10C1F812436D570096D777 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107260486CEB800E47090 /* ffmpegGui */ = {
+		activeExec = 0;
+		executables = (
+			9E10C1DB12436D3F0096D777 /* ffmpegGui */,
+		);
+	};
+	9E10C1DB12436D3F0096D777 /* ffmpegGui */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = ffmpegGui;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	9E10C1F812436D570096D777 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	9E10C1F912436D570096D777 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	9E10C20012436EFD0096D777 /* FFmpegGui.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {849, 663}}";
+			sepNavSelRange = "{1034, 0}";
+			sepNavVisRange = "{0, 1091}";
+			sepNavWindowFrame = "{{1012, 387}, {908, 791}}";
+		};
+	};
+	9E10C20112436EFD0096D777 /* FFmpegGui.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {732, 648}}";
+			sepNavSelRange = "{707, 0}";
+			sepNavVisRange = "{0, 729}";
+			sepNavWindowFrame = "{{111, 3}, {908, 775}}";
+		};
+	};
+	9E10C20E124373830096D777 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9E10C20F124373830096D777 /* vm_types.h */;
+		name = "vm_types.h: 94";
+		rLen = 25;
+		rLoc = 3525;
+		rType = 0;
+		vrLen = 1999;
+		vrLoc = 2487;
+	};
+	9E10C20F124373830096D777 /* vm_types.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = vm_types.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/usr/include/mach/i386/vm_types.h;
+		sourceTree = "<absolute>";
+	};
+	9E10C2DF12438ED20096D777 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9E10C2E012438ED20096D777 /* NSAttributeDescription.h */;
+		name = "NSAttributeDescription.h: 25";
+		rLen = 32;
+		rLoc = 632;
+		rType = 0;
+		vrLen = 1683;
+		vrLoc = 0;
+	};
+	9E10C2E012438ED20096D777 /* NSAttributeDescription.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSAttributeDescription.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreData.framework/Versions/A/Headers/NSAttributeDescription.h;
+		sourceTree = "<absolute>";
+	};
+	9E10C33E1243A0D00096D777 /* FFmpegController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {732, 648}}";
+			sepNavSelRange = "{327, 0}";
+			sepNavVisRange = "{0, 446}";
+			sepNavWindowFrame = "{{51, 236}, {908, 775}}";
+		};
+	};
+	9E10C33F1243A0D00096D777 /* FFmpegController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {732, 676}}";
+			sepNavSelRange = "{669, 0}";
+			sepNavVisRange = "{26, 1046}";
+			sepNavWindowFrame = "{{640, 0}, {640, 778}}";
+		};
+	};
+	9E10C36B1243A96F0096D777 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C165DFE840E0CC02AAC07 /* English */;
+		name = "InfoPlist.strings: 3";
+		rLen = 0;
+		rLoc = 45;
+		rType = 0;
+		vrLen = 45;
+		vrLoc = 0;
+	};
+	9E10C3741243A99E0096D777 /* FFmpegGui.m:19 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+			9E10C3831243A9F50096D777 /* XCBreakpointSoundAction */,
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 9E10C20112436EFD0096D777 /* FFmpegGui.m */;
+		functionName = "-transcodeStart";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 19;
+		location = ffmpegGui;
+		modificationTime = 306515629.245604;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	9E10C37C1243A9F00096D777 /* FFmpegController.m:20 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 9E10C33F1243A0D00096D777 /* FFmpegController.m */;
+		functionName = "-transcode:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 20;
+		location = ffmpegGui;
+		modificationTime = 306515629.245683;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	9E10C3831243A9F50096D777 /* XCBreakpointSoundAction */ = {
+		isa = XCBreakpointSoundAction;
+		fallbackIsa = XCBreakpointAction;
+		sound = Basso;
+		useDebuggerSideImplementation = 0;
+	};
+	9E10C3CB1243AFBA0096D777 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9E10C3CC1243AFBA0096D777 /* NSSound.h */;
+		name = "NSSound.h: 18";
+		rLen = 30;
+		rLoc = 330;
+		rType = 0;
+		vrLen = 1788;
+		vrLoc = 0;
+	};
+	9E10C3CC1243AFBA0096D777 /* NSSound.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSSound.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework/Versions/C/Headers/NSSound.h;
+		sourceTree = "<absolute>";
+	};
+	9E10C4021243B2C80096D777 /* FFmpegController.m:31 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 9E10C33F1243A0D00096D777 /* FFmpegController.m */;
+		functionName = "-loadFileOpenPanel:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 31;
+		location = ffmpegGui;
+		modificationTime = 306515629.245834;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	9E10C42B1243D8470096D777 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9E10C42C1243D8470096D777 /* NSObjCRuntime.h */;
+		name = "NSObjCRuntime.h: 193";
+		rLen = 77;
+		rLoc = 6804;
+		rType = 0;
+		vrLen = 1916;
+		vrLoc = 5706;
+	};
+	9E10C42C1243D8470096D777 /* NSObjCRuntime.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSObjCRuntime.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Versions/C/Headers/NSObjCRuntime.h;
+		sourceTree = "<absolute>";
+	};
+	9E3A56741243FC3D00D49D2F /* FFmpegController.m:46 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 9E10C33F1243A0D00096D777 /* FFmpegController.m */;
+		functionName = "-loadFileOpenPanel:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 46;
+		location = ffmpegGui;
+		modificationTime = 306515651.7378629;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	9E3A573A124415DB00D49D2F /* FFmpegController.m:47 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 9E10C33F1243A0D00096D777 /* FFmpegController.m */;
+		functionName = "-loadFileOpenPanel:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 47;
+		location = ffmpegGui;
+		modificationTime = 306515629.245985;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	9E6FD0701245111600F213A0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9E10C33E1243A0D00096D777 /* FFmpegController.h */;
+		name = "FFmpegController.h: 16";
+		rLen = 0;
+		rLoc = 327;
+		rType = 0;
+		vrLen = 446;
+		vrLoc = 0;
+	};
+	9E6FD0711245111600F213A0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9E10C20012436EFD0096D777 /* FFmpegGui.h */;
+		name = "FFmpegGui.h: 43";
+		rLen = 0;
+		rLoc = 1067;
+		rType = 0;
+		vrLen = 1091;
+		vrLoc = 0;
+	};
+	9E6FD0721245111600F213A0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* ffmpegGuiAppDelegate.h */;
+		name = "ffmpegGuiAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 316;
+		vrLoc = 0;
+	};
+	9E6FD0731245111600F213A0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* ffmpegGuiAppDelegate.m */;
+		name = "ffmpegGuiAppDelegate.m: 20";
+		rLen = 0;
+		rLoc = 371;
+		rType = 0;
+		vrLen = 371;
+		vrLoc = 0;
+	};
+	9E6FD0741245111600F213A0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9E10C33F1243A0D00096D777 /* FFmpegController.m */;
+		name = "FFmpegController.m: 37";
+		rLen = 0;
+		rLoc = 669;
+		rType = 0;
+		vrLen = 1046;
+		vrLoc = 26;
+	};
+	9E6FD0751245111600F213A0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9E10C20112436EFD0096D777 /* FFmpegGui.m */;
+		name = "FFmpegGui.m: 23";
+		rLen = 0;
+		rLoc = 626;
+		rType = 0;
+		vrLen = 772;
+		vrLoc = 0;
+	};
+	9E6FD0781245111600F213A0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9E10C20112436EFD0096D777 /* FFmpegGui.m */;
+		name = "FFmpegGui.m: 24";
+		rLen = 0;
+		rLoc = 707;
+		rType = 0;
+		vrLen = 729;
+		vrLoc = 0;
+	};
+	9E6FD0791245111600F213A0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9E10C20012436EFD0096D777 /* FFmpegGui.h */;
+		name = "FFmpegGui.h: 41";
+		rLen = 0;
+		rLoc = 1034;
+		rType = 0;
+		vrLen = 1091;
+		vrLoc = 0;
+	};
+	9EEE47AB12450EF10091C71A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9E10C20012436EFD0096D777 /* FFmpegGui.h */;
+		name = "FFmpegGui.h: 41";
+		rLen = 0;
+		rLoc = 1034;
+		rType = 0;
+		vrLen = 1091;
+		vrLoc = 0;
+	};
+}
