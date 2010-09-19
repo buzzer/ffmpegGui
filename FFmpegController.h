@@ -18,4 +18,5 @@
 }
 - (IBAction)transcode:(id)sender;
 - (IBAction)loadFileOpenPanel:(id)sender;
+- (IBAction)interruptTranscode:(id)sender;
 @end

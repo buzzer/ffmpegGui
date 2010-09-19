@@ -21,22 +21,23 @@
 	Boolean result;
 	
 	[ffmpeggui setVideoWidth:[widthField intValue]];
-	
 	[ffmpeggui setVideoHeight:[heightField intValue]];
 	
 	result = [ffmpeggui transcodeStart];
-	
 }
 
 - (IBAction)loadFileOpenPanel:(id)sender {
 	int result;
+	NSArray *fileTypes = [NSArray arrayWithObjects:@"txt", @"log", @"mov", nil];
 	NSOpenPanel *oPanel = [NSOpenPanel openPanel];
 	NSArray *filesToOpen;
 	NSString *theFileName;
 	
 	[oPanel setAllowsMultipleSelection:NO];
+	[oPanel setTitle:@"Choose Video File"];
+	[oPanel setMessage:@"Choose video to convert to the target format."];
 	
-	result = [oPanel runModalForDirectory:NSHomeDirectory() file:nil ];
+	result = [oPanel runModalForDirectory:NSHomeDirectory() file:nil types:fileTypes];
 	
 	if (result == NSOKButton) {
 		filesToOpen = [oPanel filenames];
@@ -44,8 +45,9 @@
 		NSLog(@"Open Panel Returned: %@.\n", theFileName);
 		
 		[self->ffmpeggui setInVFile:theFileName];
-	} else {
-		NSLog(@"Open file failed to load: %@.\n", theFileName);
 	}
+}
+- (IBAction) interruptTranscode:(id)sender {
+	[ffmpeggui terminateTask];
 }
 @end

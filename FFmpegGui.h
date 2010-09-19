@@ -27,8 +27,8 @@
 	NSString * outVFile;
 	NSString * ffmpegApp;
 	NSString * videoparApp;
-	NSString * logfilePath;	
-
+	NSString * logfilePath;
+	NSTask *task;
 }
 @property(assign) NSInteger videoWidth, videoHeight;
 @property(readonly) NSInteger videoWidthStd, videoHeightStd, maxRate, audioBitRate, audioSRate, threads;
@@ -42,5 +42,6 @@
 
 - (Boolean) transcodeStart;
 - (void) dummyTask;
+- (void) terminateTask;
 
 @end

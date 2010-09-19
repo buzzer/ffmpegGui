@@ -13,7 +13,7 @@
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<integer value="29"/>
-			<integer value="371"/>
+			<integer value="372"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1435,7 +1435,7 @@
 						<object class="NSButton" id="537431872">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{237, 28}, {106, 32}}</string>
+							<string key="NSFrame">{{237, 89}, {106, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="935888620">
@@ -1455,13 +1455,13 @@
 						<object class="NSButton" id="993537246">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{237, 89}, {106, 32}}</string>
+							<string key="NSFrame">{{237, 28}, {106, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="254934156">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Open file..</string>
+								<string key="NSContents">Abort</string>
 								<reference key="NSSupport" ref="898061450"/>
 								<reference key="NSControlView" ref="993537246"/>
 								<int key="NSButtonFlags">-2038284033</int>
@@ -2197,14 +2197,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">nextKeyView</string>
-						<reference key="source" ref="537431872"/>
-						<reference key="destination" ref="651193891"/>
-					</object>
-					<int key="connectionID">557</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">initialFirstResponder</string>
 						<reference key="source" ref="972006081"/>
 						<reference key="destination" ref="651193891"/>
@@ -2239,33 +2231,41 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">loadFileOpenPanel:</string>
 						<reference key="source" ref="203473402"/>
+						<reference key="destination" ref="722745758"/>
+					</object>
+					<int key="connectionID">572</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">interruptTranscode:</string>
+						<reference key="source" ref="203473402"/>
 						<reference key="destination" ref="993537246"/>
 					</object>
-					<int key="connectionID">566</int>
+					<int key="connectionID">574</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">nextKeyView</string>
 						<reference key="source" ref="458501568"/>
+						<reference key="destination" ref="537431872"/>
+					</object>
+					<int key="connectionID">575</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">nextKeyView</string>
+						<reference key="source" ref="537431872"/>
 						<reference key="destination" ref="993537246"/>
 					</object>
-					<int key="connectionID">570</int>
+					<int key="connectionID">576</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">nextKeyView</string>
 						<reference key="source" ref="993537246"/>
-						<reference key="destination" ref="537431872"/>
+						<reference key="destination" ref="651193891"/>
 					</object>
-					<int key="connectionID">571</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">loadFileOpenPanel:</string>
-						<reference key="source" ref="203473402"/>
-						<reference key="destination" ref="722745758"/>
-					</object>
-					<int key="connectionID">572</int>
+					<int key="connectionID">577</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2826,9 +2826,9 @@
 							<reference ref="458501568"/>
 							<reference ref="333497761"/>
 							<reference ref="731197877"/>
+							<reference ref="1018283302"/>
 							<reference ref="537431872"/>
 							<reference ref="993537246"/>
-							<reference ref="1018283302"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -3792,7 +3792,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>{{525, 802}, {197, 73}}</string>
-					<string>{{653, 720}, {439, 20}}</string>
+					<string>{{497, 720}, {439, 20}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>{74, 862}</string>
@@ -3817,9 +3817,9 @@
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
-					<string>{{669, 411}, {357, 151}}</string>
+					<string>{{579, 411}, {357, 151}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{669, 411}, {357, 151}}</string>
+					<string>{{579, 411}, {357, 151}}</string>
 					<integer value="1"/>
 					<string>{{33, 99}, {480, 360}}</string>
 					<string>{3.40282e+38, 3.40282e+38}</string>
@@ -3973,7 +3973,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">572</int>
+			<int key="maxID">577</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3985,11 +3985,13 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>interruptTranscode:</string>
 							<string>loadFileOpenPanel:</string>
 							<string>transcode:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -3998,11 +4000,16 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>interruptTranscode:</string>
 							<string>loadFileOpenPanel:</string>
 							<string>transcode:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">interruptTranscode:</string>
+								<string key="candidateClassName">id</string>
+							</object>
 							<object class="IBActionInfo">
 								<string key="name">loadFileOpenPanel:</string>
 								<string key="candidateClassName">id</string>

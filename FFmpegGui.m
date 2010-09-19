@@ -16,15 +16,16 @@
 @synthesize inVFile;
 @synthesize outVFile;
 
-//-(id)init {
-//	self = [super init];
-//	// Register as task termination observer
-//	[[NSNotificationCenter defaultCenter] addObserver:self
-//																					 selector:@selector(checkATaskStatus:)
-//																							 name:NSTaskDidTerminateNotification
-//																						 object:nil];
-//	return self;
-//}
+-(id)init {
+	self = [super init];
+	// Register as task termination observer
+	[[NSNotificationCenter defaultCenter] addObserver:self
+																					 selector:@selector(checkATaskStatus:)
+																							 name:NSTaskDidTerminateNotification
+																						 object:nil];
+
+	return self;
+}
 
 - (Boolean) transcodeStart {
 	// Call shell command with NSTask here and give a return value
@@ -53,38 +54,43 @@
 //	[aTask launch];
 //}
 //
-//- (void)checkATaskStatus:(NSNotification *)aNotification {
-//	int status = [[aNotification object] terminationStatus];
-//	if (status == ATASK_SUCCESS_VALUE)
-//		NSLog(@"Task succeeded.");
-//	else
-//		NSLog(@"Task failed.");
-//}
+- (void)checkATaskStatus:(NSNotification *)aNotification {
+	const int ATASK_SUCCESS_VALUE = 1;
+	int status = [[aNotification object] terminationStatus];
+	if (status == ATASK_SUCCESS_VALUE)
+		NSLog(@"Task succeeded.");
+	else
+		NSLog(@"Task failed.");
+}
 
 -(void) dummyTask{
-	//Launch "ls -l -a -t" in the current directory, and then read the result into an NSString:
-	
-	NSTask *task;
-	task = [[NSTask alloc] init];
-//	NSString * scriptPath = @"/Users/sebastian/bin/any2ipod";
-	NSString * scriptPath = @"/opt/local/bin/ffmpeg";
-	[task setLaunchPath: scriptPath];
+	self->task = [[NSTask alloc] init];
+
+	NSString * scriptPath = @"/Users/sebastian/bin/any2video";
+	[self->task	setLaunchPath: scriptPath];
 	
 	NSArray *arguments;
-//	arguments = [NSArray arrayWithObjects: @"-v", @"-a", @"-t", nil];
-	arguments = [NSArray arrayWithObjects: nil];
-	[task setArguments: arguments];
+//	arguments = [NSArray arrayWithObjects: [self inVFile], @"-a", @"-t", nil];
+arguments = [NSArray arrayWithObjects: @"Test",
+							 [[self inVFile] UTF8String],
+							// [NSNumber numberWithInt:[self videoWidth]],
+//							 [NSNumber numberWithInt:[self videoHeight]],
+							 nil];
+	[self->task setArguments: arguments];
+	NSLog(@"Arguments: %@\n",arguments);
 	
 	NSPipe *pipe;
 	pipe = [NSPipe pipe];
-	[task setStandardOutput: pipe];
-	[task setStandardError: pipe];
+	[self->task setStandardOutput: pipe];
+	[self->task setStandardError: pipe];
 	
 	NSFileHandle *file;
 	file = [pipe fileHandleForReading];
-	
-	[task launch];
-	[task waitUntilExit];
+
+	// Redirect output to stdout
+	[self->task setStandardInput:[NSPipe pipe]];
+	[self->task launch];
+	[self->task waitUntilExit];
 	
 	NSData *data;
 	data = [file readDataToEndOfFile];
@@ -92,6 +98,15 @@
 	NSString *string;
 	string = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
 	NSLog (@"%@", string);
+}
+- (void) terminateTask{
+	if ([self->task isRunning]) {
+  	[self->task terminate];
+		NSLog(@"Terminating task: %@\n", self->task);
+	} else {
+		NSLog(@"No task to abort\n");
+	}
+
 }
 
 @end
