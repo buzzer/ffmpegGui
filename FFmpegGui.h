@@ -13,6 +13,8 @@
 @protected
 	NSInteger videoWidth;
 	NSInteger videoHeight;
+	NSInteger videoWidthNew;
+	NSInteger videoHeightNew;
 	NSInteger videoWidthStd;
 	NSInteger videoHeightStd;
 	float aspectRatio;
@@ -20,6 +22,7 @@
 	NSInteger maxRate;
 	NSInteger audioBitRate;
 	NSInteger audioSRate;
+	NSInteger audioChannel;
 	NSInteger threads;
 	NSString * outDirectory;
 	NSString * tmpDirectory;
@@ -31,8 +34,12 @@
 	NSTask *transcodeTask1;
 	NSTask *videoparTask;
 }
-@property(assign) NSInteger videoWidth, videoHeight;
+@property(assign) NSInteger videoWidthNew, videoHeightNew;
+@property(readonly) NSInteger videoWidth, videoHeight;
 @property(readonly) NSInteger videoWidthStd, videoHeightStd, maxRate, audioBitRate, audioSRate, threads;
+@property(readonly) float aspectRatioStd;
+@property(readonly) float aspectRatio;
+@property(readonly) NSInteger audioChannel;
 @property(readonly) NSString* outDirectory;
 @property(readonly) NSString* tmpDirectory;
 @property(readonly) NSString* ffmpegApp;

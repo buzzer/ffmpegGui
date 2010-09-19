@@ -19,8 +19,8 @@
 
 - (IBAction)transcode:(id)sender {
 	
-	[ffmpeggui setVideoWidth:[widthField intValue]];
-	[ffmpeggui setVideoHeight:[heightField intValue]];
+	[ffmpeggui setVideoWidthNew:[widthField intValue]];
+	[ffmpeggui setVideoHeightNew:[heightField intValue]];
 	[ffmpeggui startTranscode];
 }
 

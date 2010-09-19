@@ -11,7 +11,10 @@
 
 @implementation FFmpegGui
 @synthesize videoWidth, videoHeight;
+@synthesize videoWidthNew, videoHeightNew;
 @synthesize videoWidthStd, videoHeightStd, maxRate, audioBitRate, audioSRate, threads;
+@synthesize aspectRatioStd, aspectRatio;
+@synthesize audioChannel;
 @synthesize outDirectory, tmpDirectory, ffmpegApp, videoparApp, logfilePath;
 @synthesize inVFile;
 @synthesize outVFile;
@@ -23,6 +26,10 @@
 																					 selector:@selector(checkATaskStatus:)
 																							 name:NSTaskDidTerminateNotification
 																						 object:nil];
+	// Set default parameters
+	self->videoWidthStd = 480;
+	self->videoHeightStd = 320;
+	self->aspectRatioStd = (float)self->videoWidthStd/self->videoHeightStd;
 
 	return self;
 }
@@ -69,6 +76,20 @@
 	NSString *string;
 	string = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
 	NSLog (@"%@", string);
+	NSArray* videoPar = [string componentsSeparatedByString:@" "];
+	NSArray* videoRes = [[videoPar objectAtIndex:0] componentsSeparatedByString:@"x"];
+
+	self->videoWidth=[[videoRes objectAtIndex:0] intValue];
+	self->videoHeight=[[videoRes objectAtIndex:1] intValue];
+	assert(self->videoHeight > 0);
+	assert(self->videoWidth > 0);
+	if (self->videoHeight != 0) {
+		self->aspectRatio = (float)self->videoWidth/self->videoHeight;
+	}
+	self->audioSRate = [[videoPar objectAtIndex:1] intValue];
+	self->audioChannel = [[videoPar objectAtIndex:2] intValue];
+	self->audioBitRate = [[videoPar objectAtIndex:3] intValue];
+
 }
 
 - (void) startTranscode {

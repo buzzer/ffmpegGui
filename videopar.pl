@@ -10,6 +10,7 @@
 
 use warnings;
 use strict;
+use Switch;
 
 
 if ( $#ARGV+1 < 1) {
@@ -17,7 +18,7 @@ if ( $#ARGV+1 < 1) {
 	exit 0;
 }
 	
-print "Called with args: $ARGV[0]\n";
+#print "Called with args: $ARGV[0]\n";
 
 my $INFILE=shift;
 die "Cannot open file $INFILE, $!" if (! -e $INFILE);
@@ -44,7 +45,7 @@ push(@vidpar, $resolution[0]);
 # video rate
 #my @vrate = split(" ", $videopar[3]);
 #push(@vidpar, $vrate[0]);
-## fps
+# fps
 #my @fps = split(" ", $videopar[4]);
 #push(@vidpar, $fps[0]);
 # sample rate
@@ -52,10 +53,16 @@ my @srate = split(" ", $audiopar[1]);
 push(@vidpar, $srate[0]);
 # channels
 my @channel = split(" ", $audiopar[2]);
-push(@vidpar, $channel[0]);
+switch($channel[0]) {
+	case "stereo" { push(@vidpar, "2") }
+	case "5.1"	  { push(@vidpar, "6") }
+	case "6"		  { push(@vidpar, "6") }
+	case "1"			{ push(@vidpar, "1") }
+	else					{ push(@vidpar, "-1") }
+}
 # audio rate
-#my @arate = split(" ", $audiopar[4]);
-#push(@vidpar, $arate[0]);
+my @arate = split(" ", $audiopar[4]);
+push(@vidpar, $arate[0]);
 
 foreach (@vidpar) {
   print $_." ";
