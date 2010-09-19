@@ -21,6 +21,9 @@
 	
 	[ffmpeggui setVideoWidthNew:[widthField intValue]];
 	[ffmpeggui setVideoHeightNew:[heightField intValue]];
+	[ffmpeggui setVideoBitRate:[vBitRateField intValue]];
+	[ffmpeggui setAudioBitRate:[aBitRateField intValue]];
+  [ffmpeggui setAudioChannel:[aChanField intValue]];
 	[ffmpeggui startTranscode];
 }
 
@@ -30,7 +33,8 @@
 
 - (IBAction)loadFileOpenPanel:(id)sender {
 	int result;
-	NSArray *fileTypes = [NSArray arrayWithObjects:@"txt", @"log", @"mov",@"avi", @"wmv", nil];
+	NSArray *fileTypes = [NSArray arrayWithObjects:
+												@"mov",@"avi",@"wmv",@"flv",@"mpeg", nil];
 	NSOpenPanel *oPanel = [NSOpenPanel openPanel];
 	NSArray *filesToOpen;
 	NSString *theFileName;
@@ -47,6 +51,7 @@
 		NSLog(@"Open Panel Returned: %@.\n", theFileName);
 		
 		[self->ffmpeggui setInVFile:theFileName];
+		[self->ffmpeggui getVideoPar];
 	}
 }
 - (IBAction) interruptTranscode:(id)sender {

@@ -12,9 +12,9 @@
 @implementation FFmpegGui
 @synthesize videoWidth, videoHeight;
 @synthesize videoWidthNew, videoHeightNew;
-@synthesize videoWidthStd, videoHeightStd, maxRate, audioBitRate, audioSRate, threads;
+@synthesize maxRate, audioBitRate, audioSRate, threads, audioChannel, videoBitRate;
+@synthesize videoWidthStd, videoHeightStd;
 @synthesize aspectRatioStd, aspectRatio;
-@synthesize audioChannel;
 @synthesize outDirectory, tmpDirectory, ffmpegApp, videoparApp, logfilePath;
 @synthesize inVFile;
 @synthesize outVFile;
@@ -30,6 +30,8 @@
 	self->videoWidthStd = 480;
 	self->videoHeightStd = 320;
 	self->aspectRatioStd = (float)self->videoWidthStd/self->videoHeightStd;
+	self->videoWidthNew = self->videoWidthStd;
+	self->videoHeightNew = self->videoHeightStd;
 
 	return self;
 }
@@ -102,8 +104,10 @@
 	NSArray *transcodeArguments;
 	transcodeArguments = [NSArray arrayWithObjects:
 							 [self inVFile],
-							 [NSString stringWithFormat:@"%d",[self videoWidth]],
- 							 [NSString stringWithFormat:@"%d",[self videoHeight]],
+							 [NSString stringWithFormat:@"%d",[self videoWidthNew]],
+ 							 [NSString stringWithFormat:@"%d",[self videoHeightNew]],
+ 							 [NSString stringWithFormat:@"%d",[self audioBitRate]],
+							 [NSString stringWithFormat:@"%d",[self audioChannel]],
 							 nil];
 	[self->transcodeTask1 setArguments: transcodeArguments];
 	
