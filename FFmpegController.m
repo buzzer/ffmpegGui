@@ -18,17 +18,19 @@
 }
 
 - (IBAction)transcode:(id)sender {
-	Boolean result;
 	
 	[ffmpeggui setVideoWidth:[widthField intValue]];
 	[ffmpeggui setVideoHeight:[heightField intValue]];
-	
-	result = [ffmpeggui transcodeStart];
+	[ffmpeggui startTranscode];
+}
+
+- (IBAction) getVideoPar:(id)sender {
+	[ffmpeggui getVideoPar];
 }
 
 - (IBAction)loadFileOpenPanel:(id)sender {
 	int result;
-	NSArray *fileTypes = [NSArray arrayWithObjects:@"txt", @"log", @"mov", nil];
+	NSArray *fileTypes = [NSArray arrayWithObjects:@"txt", @"log", @"mov",@"avi", @"wmv", nil];
 	NSOpenPanel *oPanel = [NSOpenPanel openPanel];
 	NSArray *filesToOpen;
 	NSString *theFileName;
@@ -48,6 +50,6 @@
 	}
 }
 - (IBAction) interruptTranscode:(id)sender {
-	[ffmpeggui terminateTask];
+	[ffmpeggui terminateTransTask];
 }
 @end

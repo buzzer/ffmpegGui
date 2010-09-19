@@ -14,6 +14,8 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		9E10C20212436EFD0096D777 /* FFmpegGui.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10C20112436EFD0096D777 /* FFmpegGui.m */; };
 		9E10C3401243A0D00096D777 /* FFmpegController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10C33F1243A0D00096D777 /* FFmpegController.m */; };
+		9E318F911246240200416C2D /* transcode.sh in Resources */ = {isa = PBXBuildFile; fileRef = 9E318F901246240200416C2D /* transcode.sh */; };
+		9E318FBC12462BD600416C2D /* videopar.pl in Resources */ = {isa = PBXBuildFile; fileRef = 9E318FBB12462BD600416C2D /* videopar.pl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		9E10C20112436EFD0096D777 /* FFmpegGui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFmpegGui.m; sourceTree = "<group>"; };
 		9E10C33E1243A0D00096D777 /* FFmpegController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFmpegController.h; sourceTree = "<group>"; };
 		9E10C33F1243A0D00096D777 /* FFmpegController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFmpegController.m; sourceTree = "<group>"; };
+		9E318F901246240200416C2D /* transcode.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = transcode.sh; sourceTree = "<group>"; };
+		9E318FBB12462BD600416C2D /* videopar.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = videopar.pl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9E318F901246240200416C2D /* transcode.sh */,
+				9E318FBB12462BD600416C2D /* videopar.pl */,
 				256AC3F00F4B6AF500CF3369 /* ffmpegGui_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -171,6 +177,8 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				9E318F911246240200416C2D /* transcode.sh in Resources */,
+				9E318FBC12462BD600416C2D /* videopar.pl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +254,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_GC = supported;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

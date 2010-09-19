@@ -27,35 +27,8 @@
 	return self;
 }
 
-- (Boolean) transcodeStart {
-	// Call shell command with NSTask here and give a return value
-	NSLog(@"Set video width to: %d.\n",      [self videoWidth]);
-	NSLog(@"Set video height to: %d.\n",     [self videoHeight]);
-	NSLog(@"Set input video file to: %@.\n", [self inVFile]);
-	[self dummyTask];
-	
-	return YES;
-}
-
-//- (void)runFfmpegTask:(id)sender
-//{
-//	NSTask *aTask = [[NSTask alloc] init];
-//	NSMutableArray *args = [NSMutableArray array];
-//	
-//	/* set arguments */
-//	NSFileHandle * inputFile=[[self inVFile] fileSystemRepresentation];
-//	NSFileHandle * outputFile=[[self inVFile] fileSystemRepresentation];
-//	[args addObject:[[inputFile stringValue] lastPathComponent]];
-//	[args addObject:[outputFile stringValue]];
-//	[aTask setCurrentDirectoryPath:[[inputFile stringValue]
-//																	stringByDeletingLastPathComponent]];
-//	[aTask setLaunchPath:[taskField stringValue]];
-//	[aTask setArguments:args];
-//	[aTask launch];
-//}
-//
 - (void)checkATaskStatus:(NSNotification *)aNotification {
-	const int ATASK_SUCCESS_VALUE = 1;
+	const int ATASK_SUCCESS_VALUE = 0;
 	int status = [[aNotification object] terminationStatus];
 	if (status == ATASK_SUCCESS_VALUE)
 		NSLog(@"Task succeeded.");
@@ -63,34 +36,32 @@
 		NSLog(@"Task failed.");
 }
 
--(void) dummyTask{
-	self->task = [[NSTask alloc] init];
-
-	NSString * scriptPath = @"/Users/sebastian/bin/any2video";
-	[self->task	setLaunchPath: scriptPath];
+- (void) getVideoPar {
+	self->videoparTask   = [[NSTask alloc] init];
+  NSString *videoparPath = [[NSBundle  mainBundle] pathForResource:@"videopar" ofType:@"pl"];
+	[self->videoparTask setLaunchPath: videoparPath];
 	
-	NSArray *arguments;
-//	arguments = [NSArray arrayWithObjects: [self inVFile], @"-a", @"-t", nil];
-arguments = [NSArray arrayWithObjects: @"Test",
-							 [[self inVFile] UTF8String],
-							// [NSNumber numberWithInt:[self videoWidth]],
-//							 [NSNumber numberWithInt:[self videoHeight]],
-							 nil];
-	[self->task setArguments: arguments];
-	NSLog(@"Arguments: %@\n",arguments);
+	NSArray* videoparArgs;
+	videoparArgs = [NSArray arrayWithObjects:
+									[self inVFile],
+									nil];
+	[self->videoparTask setArguments: videoparArgs];
 	
 	NSPipe *pipe;
 	pipe = [NSPipe pipe];
-	[self->task setStandardOutput: pipe];
-	[self->task setStandardError: pipe];
+	
+	[self->videoparTask setStandardOutput: pipe];
+	[self->videoparTask setStandardError: pipe];
 	
 	NSFileHandle *file;
 	file = [pipe fileHandleForReading];
-
+	
+	NSLog(@"Calling videopar with arguments: %@\n",videoparArgs);
+	
 	// Redirect output to stdout
-	[self->task setStandardInput:[NSPipe pipe]];
-	[self->task launch];
-	[self->task waitUntilExit];
+	[self->videoparTask setStandardInput:[NSPipe pipe]];
+	[self->videoparTask launch];
+	[self->videoparTask waitUntilExit];
 	
 	NSData *data;
 	data = [file readDataToEndOfFile];
@@ -99,14 +70,53 @@ arguments = [NSArray arrayWithObjects: @"Test",
 	string = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
 	NSLog (@"%@", string);
 }
-- (void) terminateTask{
-	if ([self->task isRunning]) {
-  	[self->task terminate];
-		NSLog(@"Terminating task: %@\n", self->task);
+
+- (void) startTranscode {
+	self->transcodeTask1 = [[NSTask alloc] init];
+	
+  NSString *transcodePath = [[NSBundle  mainBundle] pathForResource:@"transcode" ofType:@"sh"];
+	
+	[self->transcodeTask1	setLaunchPath: transcodePath];
+	
+	NSArray *transcodeArguments;
+	transcodeArguments = [NSArray arrayWithObjects:
+							 [self inVFile],
+							 [NSString stringWithFormat:@"%d",[self videoWidth]],
+ 							 [NSString stringWithFormat:@"%d",[self videoHeight]],
+							 nil];
+	[self->transcodeTask1 setArguments: transcodeArguments];
+	
+		
+	NSPipe *pipe;
+	pipe = [NSPipe pipe];
+	[self->transcodeTask1 setStandardOutput: pipe];
+	[self->transcodeTask1 setStandardError: pipe];
+	
+	NSFileHandle *file;
+	file = [pipe fileHandleForReading];
+
+	NSLog(@"Calling transcode with arguments: %@\n",transcodeArguments);
+
+	// Redirect output to stdout
+	[self->transcodeTask1 setStandardInput:[NSPipe pipe]];
+	[self->transcodeTask1 launch];
+	[self->transcodeTask1 waitUntilExit];
+	
+	NSData *data;
+	data = [file readDataToEndOfFile];
+	
+	NSString *string;
+	string = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
+	NSLog (@"%@", string);
+}
+
+- (void) terminateTransTask {
+	if ([self->transcodeTask1 isRunning]) {
+  	[self->transcodeTask1 terminate];
+		NSLog(@"Terminating task: %@\n", self->transcodeTask1);
 	} else {
 		NSLog(@"No task to abort\n");
 	}
-
 }
 
 @end

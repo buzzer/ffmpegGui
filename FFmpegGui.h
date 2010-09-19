@@ -28,7 +28,8 @@
 	NSString * ffmpegApp;
 	NSString * videoparApp;
 	NSString * logfilePath;
-	NSTask *task;
+	NSTask *transcodeTask1;
+	NSTask *videoparTask;
 }
 @property(assign) NSInteger videoWidth, videoHeight;
 @property(readonly) NSInteger videoWidthStd, videoHeightStd, maxRate, audioBitRate, audioSRate, threads;
@@ -37,11 +38,11 @@
 @property(readonly) NSString* ffmpegApp;
 @property(readonly) NSString* videoparApp;
 @property(readonly) NSString* logfilePath;
-@property(retain) NSString* inVFile;
-@property(retain) NSString* outVFile;
+@property(copy) NSString* inVFile;
+@property(copy) NSString* outVFile;
 
-- (Boolean) transcodeStart;
-- (void) dummyTask;
-- (void) terminateTask;
+- (void) startTranscode;
+- (void) getVideoPar;
+- (void) terminateTransTask;
 
 @end

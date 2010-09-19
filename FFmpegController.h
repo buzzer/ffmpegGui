@@ -16,6 +16,7 @@
 	IBOutlet NSTextField *filenameField;
 	FFmpegGui *ffmpeggui;
 }
+- (IBAction)getVideoPar:(id)sender;
 - (IBAction)transcode:(id)sender;
 - (IBAction)loadFileOpenPanel:(id)sender;
 - (IBAction)interruptTranscode:(id)sender;
