@@ -18,6 +18,7 @@
 	IBOutlet NSTextField *aBitRateField;
 	IBOutlet NSTextField *aChanField;
 	IBOutlet NSTextField *outText;
+	IBOutlet NSTextView  *textView;
 	FFmpegGui *ffmpeggui;
 }
 - (IBAction)getVideoPar:(id)sender;

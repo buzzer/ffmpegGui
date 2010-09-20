@@ -54,10 +54,10 @@ echo $VWIDTH $VHEIGHT $ABITR $audiochan
 
 
 # Create unique temp directory
-RANPREFIX="`basename $0`-""$RANDOM"
-TMPDIR="/tmp/$RANPREFIX/" ;
-[ -d "$TMPDIR" ] || mkdir "$TMPDIR" || exit -1
-cd $TMPDIR
+#RANPREFIX="`basename $0`-""$RANDOM"
+#TMPDIR="/tmp/$RANPREFIX/" ;
+#[ -d "$TMPDIR" ] || mkdir "$TMPDIR" || exit -1
+#cd $TMPDIR
 
 echo
 echo "Encode with following settings:"
@@ -72,10 +72,11 @@ echo threads: $THREADS
 echo output directory: $ODIR
 echo
 
-IFILE="$1"
+#IFILE="$1"
+IFILE=""
 OFILE="$TMPDIR"`basename "$1"`.mp4
 
-echo "`date` `basename "$OFILE"` BEGIN ENCODING" >> $LOGFILE
+#echo "`date` `basename "$OFILE"` BEGIN ENCODING" >> $LOGFILE
 
 # 1st pass
 $FFMPEG -an -pass 1 \
@@ -147,10 +148,10 @@ $FFMPEG \
   "$OFILE" && mv "$OFILE" "$ODIR""`basename "$OFILE"`" && \
     echo && echo Moved "$OFILE" to "$ODIR""`basename "$OFILE"`" && echo
 
-echo "`date` `basename "$OFILE"` END ENCODING" >> $LOGFILE
+#echo "`date` `basename "$OFILE"` END ENCODING" >> $LOGFILE
 
 # Clean log files
-rm ffmpeg2pass-0.log x264_2pass.log* || exit -1
-rm -r $TMPDIR || exit -1
+#rm ffmpeg2pass-0.log x264_2pass.log* || exit -1
+#rm -r $TMPDIR || exit -1
 
 exit 0
