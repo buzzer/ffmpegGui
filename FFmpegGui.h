@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-
 @interface FFmpegGui : NSObject {
 @protected
 	NSInteger videoWidth;
@@ -34,6 +33,7 @@
 	NSString * logfilePath;
 	NSTask *transcodeTask1;
 	NSTask *videoparTask;
+	NSObject *controllerCB;
 }
 @property(assign) NSInteger videoWidthNew, videoHeightNew;
 @property(readonly) NSInteger videoWidth, videoHeight, videoWidthStd, videoHeightStd;
@@ -47,6 +47,7 @@
 @property(readonly) NSString* logfilePath;
 @property(copy) NSString* inVFile;
 @property(copy) NSString* outVFile;
+@property(assign) NSObject* controllerCB;
 
 - (void) startTranscode;
 - (void) getVideoPar;

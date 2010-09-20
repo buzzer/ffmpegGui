@@ -18,6 +18,7 @@
 @synthesize outDirectory, tmpDirectory, ffmpegApp, videoparApp, logfilePath;
 @synthesize inVFile;
 @synthesize outVFile;
+@synthesize controllerCB;
 
 -(id)init {
 	self = [super init];
@@ -43,6 +44,7 @@
 		NSLog(@"Task succeeded.");
 	else
 		NSLog(@"Task failed.");
+		[controllerCB stopProgressBar];
 }
 
 - (void) getVideoPar {
@@ -78,6 +80,9 @@
 	NSString *string;
 	string = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
 	NSLog (@"%@", string);
+	
+	[controllerCB textViewPrint:[NSString stringWithFormat:@"%@\n", string]];
+	
 	NSArray* videoPar = [string componentsSeparatedByString:@" "];
 	NSArray* videoRes = [[videoPar objectAtIndex:0] componentsSeparatedByString:@"x"];
 
@@ -102,6 +107,7 @@
 	[self->transcodeTask1	setLaunchPath: transcodePath];
 	
 	NSArray *transcodeArguments;
+	//TODO also video bitrate
 	transcodeArguments = [NSArray arrayWithObjects:
 							 [self inVFile],
 							 [NSString stringWithFormat:@"%d",[self videoWidthNew]],
@@ -122,6 +128,7 @@
 
 	NSLog(@"Calling transcode with arguments: %@\n",transcodeArguments);
 
+	[controllerCB startProgressBar];
 	// Redirect output to stdout
 	[self->transcodeTask1 setStandardInput:[NSPipe pipe]];
 	[self->transcodeTask1 launch];
@@ -133,15 +140,19 @@
 	NSString *string;
 	string = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
 	NSLog (@"%@", string);
+	[controllerCB textViewPrint: string];
 }
 
 - (void) terminateTransTask {
 	if ([self->transcodeTask1 isRunning]) {
   	[self->transcodeTask1 terminate];
 		NSLog(@"Terminating task: %@\n", self->transcodeTask1);
+		[controllerCB textViewPrint:@"Terminating task: %@\n", self->transcodeTask1];
 	} else {
 		NSLog(@"No task to abort\n");
+		[controllerCB textViewPrint:@"No task to abort\n"];
 	}
+		[controllerCB stopProgressBar];
 }
 
 @end

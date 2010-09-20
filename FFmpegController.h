@@ -17,12 +17,16 @@
 	IBOutlet NSTextField *vBitRateField;
 	IBOutlet NSTextField *aBitRateField;
 	IBOutlet NSTextField *aChanField;
-	IBOutlet NSTextField *outText;
 	IBOutlet NSTextView  *textView;
+	IBOutlet NSProgressIndicator *progressBar;
 	FFmpegGui *ffmpeggui;
 }
 - (IBAction)getVideoPar:(id)sender;
 - (IBAction)transcode:(id)sender;
 - (IBAction)loadFileOpenPanel:(id)sender;
 - (IBAction)interruptTranscode:(id)sender;
+- (void)textViewPrint:(NSString*)string;
+- (void)startProgressBar;
+- (void)stopProgressBar;
+
 @end

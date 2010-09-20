@@ -9,7 +9,7 @@
 # Outputs ipod/iphone compatible video files in $ODIR
 # Using 2-pass encoding
 
-FFMPEG="ffmpeg"
+FFMPEG="/opt/local/bin/ffmpeg"
 LOGFILE="$HOME/`basename $0`.log"
 
 echo "Called with args: "$@

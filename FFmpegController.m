@@ -14,6 +14,13 @@
 	if (self = [super init]){
 		self->ffmpeggui = [[FFmpegGui alloc] init];
 	}
+	// Register callback to model
+	[ffmpeggui setControllerCB:self];
+//	[textView toggleContinuousSpellChecking:(id)self];
+//	if ([self->textView isContinuousSpellCheckingEnabled]) {
+//		[self->textView setContinuousSpellCheckingEnabled:YES];
+//	}
+
 	return self;
 }
 
@@ -52,9 +59,29 @@
 		
 		[self->ffmpeggui setInVFile:theFileName];
 		[self->ffmpeggui getVideoPar];
+		[self textViewPrint:[NSString stringWithFormat:@"%@\n",theFileName]];
 	}
 }
 - (IBAction) interruptTranscode:(id)sender {
 	[ffmpeggui terminateTransTask];
+}
+- (void) awakeFromNib {
+	NSCalendarDate *now;
+	now = [NSCalendarDate calendarDate];
+	[textView insertText:[NSString stringWithFormat:@"%@\n",now]];
+	[widthField setIntegerValue:[ffmpeggui videoWidthStd]];
+	[heightField setIntegerValue:[ffmpeggui videoHeightStd]];
+	[vBitRateField setIntegerValue:512];
+	[aBitRateField setIntegerValue:96];
+	[aChanField setIntegerValue:2];
+}
+- (void) textViewPrint:(NSString*) string {
+	[textView insertText:string];
+}
+- (void) startProgressBar {
+	[progressBar startAnimation:self];
+}
+- (void) stopProgressBar {
+	[progressBar stopAnimation:self];
 }
 @end

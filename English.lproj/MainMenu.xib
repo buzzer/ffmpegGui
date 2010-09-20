@@ -12,8 +12,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="29"/>
 			<integer value="372"/>
+			<integer value="29"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1540,8 +1540,8 @@
 						</object>
 						<object class="NSButton" id="537431872">
 							<reference key="NSNextResponder" ref="439893737"/>
-							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{330, 389}, {106, 32}}</string>
+							<int key="NSvFlags">265</int>
+							<string key="NSFrame">{{406, 363}, {106, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="935888620">
@@ -1560,8 +1560,8 @@
 						</object>
 						<object class="NSButton" id="993537246">
 							<reference key="NSNextResponder" ref="439893737"/>
-							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{330, 354}, {106, 32}}</string>
+							<int key="NSvFlags">265</int>
+							<string key="NSFrame">{{406, 325}, {106, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="254934156">
@@ -1580,7 +1580,7 @@
 						</object>
 						<object class="NSBox" id="1018283302">
 							<reference key="NSNextResponder" ref="439893737"/>
-							<int key="NSvFlags">12</int>
+							<int key="NSvFlags">8</int>
 							<string key="NSFrame">{{306, 267}, {5, 163}}</string>
 							<string key="NSBounds">{{0, 25.3034}, {5, 163}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
@@ -1603,9 +1603,9 @@
 						</object>
 						<object class="NSProgressIndicator" id="549710716">
 							<reference key="NSNextResponder" ref="439893737"/>
-							<int key="NSvFlags">1292</int>
+							<int key="NSvFlags">1285</int>
 							<object class="NSPSMatrix" key="NSDrawMatrix"/>
-							<string key="NSFrame">{{453, 394}, {146, 20}}</string>
+							<string key="NSFrame">{{162, 9}, {293, 20}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<int key="NSpiFlags">16394</int>
 							<double key="NSMaxValue">100</double>
@@ -1646,7 +1646,7 @@
 													<string>public.url</string>
 												</object>
 											</object>
-											<string key="NSFrameSize">{560, 30}</string>
+											<string key="NSFrameSize">{562, 0}</string>
 											<reference key="NSSuperview" ref="88467857"/>
 											<object class="NSTextContainer" key="NSTextContainer" id="18574088">
 												<object class="NSLayoutManager" key="NSLayoutManager">
@@ -1664,7 +1664,7 @@
 													<nil key="NSDelegate"/>
 												</object>
 												<reference key="NSTextView" ref="149599976"/>
-												<double key="NSWidth">560</double>
+												<double key="NSWidth">562</double>
 												<int key="NSTCFlags">1</int>
 											</object>
 											<object class="NSTextViewSharedData" key="NSSharedData">
@@ -1720,12 +1720,12 @@
 												<nil key="NSDefaultParagraphStyle"/>
 											</object>
 											<int key="NSTVFlags">6</int>
-											<string key="NSMaxSize">{568, 1e+07}</string>
-											<string key="NSMinize">{223, 30}</string>
+											<string key="NSMaxSize">{997, 1e+07}</string>
+											<string key="NSMinize">{223, 0}</string>
 											<nil key="NSDelegate"/>
 										</object>
 									</object>
-									<string key="NSFrame">{{1, 1}, {560, 228}}</string>
+									<string key="NSFrameSize">{562, 213}</string>
 									<reference key="NSSuperview" ref="350210826"/>
 									<reference key="NSNextKeyView" ref="149599976"/>
 									<reference key="NSDocView" ref="149599976"/>
@@ -1739,7 +1739,7 @@
 								<object class="NSScroller" id="545696028">
 									<reference key="NSNextResponder" ref="350210826"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{561, 1}, {15, 228}}</string>
+									<string key="NSFrame">{{562, 0}, {15, 213}}</string>
 									<reference key="NSSuperview" ref="350210826"/>
 									<reference key="NSTarget" ref="350210826"/>
 									<string key="NSAction">_doScroller:</string>
@@ -1758,10 +1758,10 @@
 									<double key="NSPercent">0.94565218687057495</double>
 								</object>
 							</object>
-							<string key="NSFrame">{{20, 20}, {577, 230}}</string>
+							<string key="NSFrame">{{20, 37}, {577, 213}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSNextKeyView" ref="88467857"/>
-							<int key="NSsFlags">18</int>
+							<int key="NSsFlags">16</int>
 							<reference key="NSVScroller" ref="545696028"/>
 							<reference key="NSHScroller" ref="479096598"/>
 							<reference key="NSContentView" ref="88467857"/>
@@ -2542,38 +2542,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">aBitRateField</string>
-						<reference key="source" ref="203473402"/>
-						<reference key="destination" ref="1017473748"/>
-					</object>
-					<int key="connectionID">602</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">aChanField</string>
-						<reference key="source" ref="203473402"/>
-						<reference key="destination" ref="536231369"/>
-					</object>
-					<int key="connectionID">603</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">widthField</string>
-						<reference key="source" ref="203473402"/>
-						<reference key="destination" ref="651193891"/>
-					</object>
-					<int key="connectionID">604</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">heightField</string>
-						<reference key="source" ref="203473402"/>
-						<reference key="destination" ref="458501568"/>
-					</object>
-					<int key="connectionID">605</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="639624706"/>
 						<reference key="destination" ref="439893737"/>
@@ -2598,19 +2566,59 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
-						<string key="label">vBitRateField</string>
-						<reference key="source" ref="203473402"/>
-						<reference key="destination" ref="639624706"/>
-					</object>
-					<int key="connectionID">614</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
 						<string key="label">textView</string>
 						<reference key="source" ref="203473402"/>
 						<reference key="destination" ref="149599976"/>
 					</object>
 					<int key="connectionID">629</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">widthField</string>
+						<reference key="source" ref="203473402"/>
+						<reference key="destination" ref="651193891"/>
+					</object>
+					<int key="connectionID">630</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">heightField</string>
+						<reference key="source" ref="203473402"/>
+						<reference key="destination" ref="458501568"/>
+					</object>
+					<int key="connectionID">631</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">vBitRateField</string>
+						<reference key="source" ref="203473402"/>
+						<reference key="destination" ref="639624706"/>
+					</object>
+					<int key="connectionID">632</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">aBitRateField</string>
+						<reference key="source" ref="203473402"/>
+						<reference key="destination" ref="1017473748"/>
+					</object>
+					<int key="connectionID">633</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">aChanField</string>
+						<reference key="source" ref="203473402"/>
+						<reference key="destination" ref="536231369"/>
+					</object>
+					<int key="connectionID">634</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">progressBar</string>
+						<reference key="source" ref="203473402"/>
+						<reference key="destination" ref="549710716"/>
+					</object>
+					<int key="connectionID">635</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3168,9 +3176,6 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="1018283302"/>
-							<reference ref="549710716"/>
-							<reference ref="537431872"/>
-							<reference ref="993537246"/>
 							<reference ref="651193891"/>
 							<reference ref="458501568"/>
 							<reference ref="1017473748"/>
@@ -3182,6 +3187,9 @@
 							<reference ref="840728145"/>
 							<reference ref="1001411410"/>
 							<reference ref="350210826"/>
+							<reference ref="549710716"/>
+							<reference ref="537431872"/>
+							<reference ref="993537246"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -4492,7 +4500,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">629</int>
+			<int key="maxID">635</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4554,7 +4562,7 @@
 							<string>aChanField</string>
 							<string>filenameField</string>
 							<string>heightField</string>
-							<string>outText</string>
+							<string>progressBar</string>
 							<string>textView</string>
 							<string>vBitRateField</string>
 							<string>widthField</string>
@@ -4565,7 +4573,7 @@
 							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
-							<string>NSTextField</string>
+							<string>NSProgressIndicator</string>
 							<string>NSTextView</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
@@ -4579,7 +4587,7 @@
 							<string>aChanField</string>
 							<string>filenameField</string>
 							<string>heightField</string>
-							<string>outText</string>
+							<string>progressBar</string>
 							<string>textView</string>
 							<string>vBitRateField</string>
 							<string>widthField</string>
@@ -4603,8 +4611,8 @@
 								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
-								<string key="name">outText</string>
-								<string key="candidateClassName">NSTextField</string>
+								<string key="name">progressBar</string>
+								<string key="candidateClassName">NSProgressIndicator</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">textView</string>
