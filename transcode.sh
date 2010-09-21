@@ -74,6 +74,7 @@ echo
 
 #IFILE="$1"
 IFILE=""
+sleep 10
 OFILE="$TMPDIR"`basename "$1"`.mp4
 
 #echo "`date` `basename "$OFILE"` BEGIN ENCODING" >> $LOGFILE
