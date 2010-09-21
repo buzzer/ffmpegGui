@@ -7,6 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "FFmpegController.h"
+
+@class FFmpegController;
 
 @interface FFmpegGui : NSObject {
 @protected
@@ -33,7 +36,7 @@
 	NSString * logfilePath;
 	NSTask *transcodeTask1;
 	NSTask *videoparTask;
-	NSObject *controllerCB;
+	FFmpegController *controller;
 }
 @property(assign) NSInteger videoWidthNew, videoHeightNew;
 @property(readonly) NSInteger videoWidth, videoHeight, videoWidthStd, videoHeightStd;
@@ -47,7 +50,7 @@
 @property(readonly) NSString* logfilePath;
 @property(copy) NSString* inVFile;
 @property(copy) NSString* outVFile;
-@property(assign) NSObject* controllerCB;
+@property(assign) FFmpegController* controller;
 
 - (void) startTranscode;
 - (void) getVideoPar;

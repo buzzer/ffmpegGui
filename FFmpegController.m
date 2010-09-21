@@ -15,7 +15,7 @@
 		self->ffmpeggui = [[FFmpegGui alloc] init];
 	}
 	// Register callback to model
-	[ffmpeggui setControllerCB:self];
+	[ffmpeggui setController:self];
 //	[textView toggleContinuousSpellChecking:(id)self];
 //	if ([self->textView isContinuousSpellCheckingEnabled]) {
 //		[self->textView setContinuousSpellCheckingEnabled:YES];
@@ -83,5 +83,11 @@
 }
 - (void) stopProgressBar {
 	[progressBar stopAnimation:self];
+}
+- (IBAction) openPreferences:(id)sender {
+	
+}
+- (IBAction) openAbout:(id)sender {
+	
 }
 @end

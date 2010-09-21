@@ -18,7 +18,7 @@
 @synthesize outDirectory, tmpDirectory, ffmpegApp, videoparApp, logfilePath;
 @synthesize inVFile;
 @synthesize outVFile;
-@synthesize controllerCB;
+@synthesize controller;
 
 -(id)init {
 	self = [super init];
@@ -39,7 +39,7 @@
 		NSLog(@"Task succeeded.");
 	else
 		NSLog(@"Task failed.");
-		[controllerCB stopProgressBar];
+		[controller stopProgressBar];
 }
 
 - (void) getVideoPar {
@@ -76,7 +76,7 @@
 	string = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
 	NSLog (@"%@", string);
 	
-	[controllerCB textViewPrint:[NSString stringWithFormat:@"%@\n", string]];
+	[controller textViewPrint:[NSString stringWithFormat:@"%@\n", string]];
 	
 	NSArray* videoPar = [string componentsSeparatedByString:@" "];
 	NSArray* videoRes = [[videoPar objectAtIndex:0] componentsSeparatedByString:@"x"];
@@ -139,7 +139,7 @@
 
 	NSLog(@"Calling transcode with arguments: %@\n",transcodeArguments);
 
-	[controllerCB startProgressBar];
+	[controller startProgressBar];
 	// Redirect output to stdout
 	//[transcodeTask1 setStandardInput:[NSPipe pipe]];
 
@@ -168,11 +168,11 @@
 
 	while ((data = [[[transcodeTask1 standardOutput] fileHandleForReading] availableData]) && [data length])
 	{
-		[controllerCB textViewPrint: [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease]];
+		[controller textViewPrint: [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease]];
 	}
 
 	NSLog(@"Terminating task: %@\n", self->transcodeTask1);
-	[controllerCB stopProgressBar];
+	[controller stopProgressBar];
 	
 //	if ([self->transcodeTask1 isRunning]) {
 //  	[self->transcodeTask1 terminate];
@@ -196,7 +196,7 @@
 		// Send the data on to the controller; we can't just use +stringWithUTF8String: here
 		// because -[data bytes] is not necessarily a properly terminated string.
 		// -initWithData:encoding: on the other hand checks -[data length]
-		[controllerCB textViewPrint: [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease]];
+		[controller textViewPrint: [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease]];
 	} else {
 		// We're finished here
 		[self terminateTransTask];
