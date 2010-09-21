@@ -17,10 +17,22 @@
 	IBOutlet NSTextField *vBitRateField;
 	IBOutlet NSTextField *aBitRateField;
 	IBOutlet NSTextField *aChanField;
+//	IBOutlet NSTextField *widthFieldIn;
+//	IBOutlet NSTextField *heightFieldIn;	
+//	IBOutlet NSTextField *vBitRateFieldIn;
+//	IBOutlet NSTextField *aBitRateFieldIn;
+//	IBOutlet NSTextField *aChanFieldIn;
 	IBOutlet NSTextView  *textView;
 	IBOutlet NSProgressIndicator *progressBar;
+	IBOutlet NSTextField *ffmpegPath;
 	FFmpegGui *ffmpeggui;
 }
+//@property (readwrite,copy) NSTextField* widthFieldIn;
+//@property (readwrite,copy) NSTextField* heightFieldIn;
+//@property (readwrite,copy) NSTextField* vBitRateFieldIn;
+//@property (readwrite,copy) NSTextField* aBitRateFieldIn;
+//@property (readwrite,copy) NSTextField* aChanFieldIn;
+
 - (IBAction)getVideoPar:(id)sender;
 - (IBAction)transcode:(id)sender;
 - (IBAction)loadFileOpenPanel:(id)sender;

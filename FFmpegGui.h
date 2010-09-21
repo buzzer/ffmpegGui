@@ -12,7 +12,6 @@
 @class FFmpegController;
 
 @interface FFmpegGui : NSObject {
-@protected
 	NSInteger videoWidth;
 	NSInteger videoHeight;
 	NSInteger videoWidthNew;

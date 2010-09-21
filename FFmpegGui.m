@@ -43,21 +43,21 @@
 }
 
 - (void) getVideoPar {
-	self->videoparTask   = [[NSTask alloc] init];
+	videoparTask   = [[NSTask alloc] init];
   NSString *videoparPath = [[NSBundle  mainBundle] pathForResource:@"videopar" ofType:@"pl"];
-	[self->videoparTask setLaunchPath: videoparPath];
+	[videoparTask setLaunchPath: videoparPath];
 	
 	NSArray* videoparArgs;
 	videoparArgs = [NSArray arrayWithObjects:
 									[self inVFile],
 									nil];
-	[self->videoparTask setArguments: videoparArgs];
+	[videoparTask setArguments: videoparArgs];
 	
 	NSPipe *pipe;
 	pipe = [NSPipe pipe];
 	
-	[self->videoparTask setStandardOutput: pipe];
-	[self->videoparTask setStandardError: pipe];
+	[videoparTask setStandardOutput: pipe];
+	[videoparTask setStandardError: pipe];
 	
 	NSFileHandle *file;
 	file = [pipe fileHandleForReading];
@@ -65,9 +65,9 @@
 	NSLog(@"Calling videopar with arguments: %@\n",videoparArgs);
 	
 	// Redirect output to stdout
-	[self->videoparTask setStandardInput:[NSPipe pipe]];
-	[self->videoparTask launch];
-	[self->videoparTask waitUntilExit];
+	[videoparTask setStandardInput:[NSPipe pipe]];
+	[videoparTask launch];
+	[videoparTask waitUntilExit];
 	
 	NSData *data;
 	data = [file readDataToEndOfFile];
@@ -81,17 +81,17 @@
 	NSArray* videoPar = [string componentsSeparatedByString:@" "];
 	NSArray* videoRes = [[videoPar objectAtIndex:0] componentsSeparatedByString:@"x"];
 
-	self->videoWidth=[[videoRes objectAtIndex:0] intValue];
-	self->videoHeight=[[videoRes objectAtIndex:1] intValue];
-	assert(self->videoHeight > 0);
-	assert(self->videoWidth > 0);
-	if (self->videoHeight != 0) {
-		self->aspectRatio = (float)self->videoWidth/self->videoHeight;
+	videoWidth=[[videoRes objectAtIndex:0] intValue];
+	videoHeight=[[videoRes objectAtIndex:1] intValue];
+	assert(videoHeight > 0);
+	assert(videoWidth > 0);
+	if (videoHeight != 0) {
+		aspectRatio = (float)self->videoWidth/self->videoHeight;
 	}
-	self->audioSRate = [[videoPar objectAtIndex:1] intValue];
-	self->audioChannel = [[videoPar objectAtIndex:2] intValue];
-	self->audioBitRate = [[videoPar objectAtIndex:3] intValue];
-
+	audioSRate = [[videoPar objectAtIndex:1] intValue];
+	audioChannel = [[videoPar objectAtIndex:2] intValue];
+	audioBitRate = [[videoPar objectAtIndex:3] intValue];
+//	NSArray* videoParameter = [[[NSArray alloc] init] addObject:<#(id)anObject#> ];
 }
 
 - (void) startTranscode {

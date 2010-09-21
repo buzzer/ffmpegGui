@@ -8,8 +8,9 @@
 
 #import "FFmpegController.h"
 
-
 @implementation FFmpegController
+//@synthesize widthFieldIn,heightFieldIn, vBitRateFieldIn, aBitRateFieldIn, aChanFieldIn;
+
 - (id) init {
 	if (self = [super init]){
 		self->ffmpeggui = [[FFmpegGui alloc] init];
@@ -57,10 +58,12 @@
 		theFileName = [filesToOpen objectAtIndex:0];
 		NSLog(@"Open Panel Returned: %@.\n", theFileName);
 		
-		[self->ffmpeggui setInVFile:theFileName];
-		[self->ffmpeggui getVideoPar];
+		[ffmpeggui setInVFile:theFileName];
+		[ffmpeggui getVideoPar];
 		[self textViewPrint:[NSString stringWithFormat:@"%@\n",theFileName]];
 	}
+	// Display opened filepath
+	[filenameField setStringValue:theFileName];
 }
 - (IBAction) interruptTranscode:(id)sender {
 	[ffmpeggui terminateTransTask];
