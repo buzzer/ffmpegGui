@@ -49,7 +49,7 @@
 	
 	[oPanel setAllowsMultipleSelection:NO];
 	[oPanel setTitle:@"Choose Video File"];
-	[oPanel setMessage:@"Choose video to convert to the target format."];
+	//[oPanel setMessage:@"Choose video to convert to the target format."];
 	
 	result = [oPanel runModalForDirectory:NSHomeDirectory() file:nil types:fileTypes];
 	
@@ -61,9 +61,33 @@
 		[ffmpeggui setInVFile:theFileName];
 		[ffmpeggui getVideoPar];
 		[self textViewPrint:[NSString stringWithFormat:@"%@\n",theFileName]];
+	
+		// Display opened filepath
+		[filenameField setStringValue:theFileName];
 	}
-	// Display opened filepath
-	[filenameField setStringValue:theFileName];
+}
+- (IBAction)saveFileSavePanel:(id)sender {
+	int result;
+	NSOpenPanel *sPanel = [NSOpenPanel openPanel];
+	NSString * theFolderName;
+	
+	[sPanel setAllowsMultipleSelection:NO];
+	[sPanel setCanChooseFiles:NO];
+	[sPanel setCanChooseDirectories:YES];
+	[sPanel setTitle:@"Choose Output Directory"];
+	
+	result = [sPanel runModal];
+	
+	if (result == NSFileHandlingPanelOKButton) {
+		theFolderName = [[[sPanel URLs] objectAtIndex:0] absoluteString];
+		
+		NSLog(@"Save Panel Returned: %@.\n", theFolderName);
+		
+		[ffmpeggui setOutVFile:theFolderName];
+		[self textViewPrint:[NSString stringWithFormat:@"Output folder: %@\n",theFolderName]];
+		// Display opened filepath
+		[folderNameField setStringValue:theFolderName];
+	}
 }
 - (IBAction) interruptTranscode:(id)sender {
 	[ffmpeggui terminateTransTask];
@@ -79,7 +103,10 @@
 	[aChanField setIntegerValue:2];
 }
 - (void) textViewPrint:(NSString*) string {
+	[textView setEditable:YES];
+	[textView setContinuousSpellCheckingEnabled:NO];
 	[textView insertText:string];
+	[textView setEditable:NO];
 }
 - (void) startProgressBar {
 	[progressBar startAnimation:self];

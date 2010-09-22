@@ -12,10 +12,10 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="645"/>
-			<integer value="371"/>
-			<integer value="29"/>
 			<integer value="639"/>
+			<integer value="81"/>
+			<integer value="372"/>
+			<integer value="645"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -274,7 +274,7 @@
 								</object>
 								<object class="NSMenuItem" id="117038363">
 									<reference key="NSMenu" ref="720053764"/>
-									<string key="NSTitle">Save As…</string>
+									<string key="NSTitle">Save In…</string>
 									<string key="NSKeyEquiv">S</string>
 									<int key="NSKeyEquivModMask">1179648</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -1561,7 +1561,7 @@
 								<string key="NSContents">Convert</string>
 								<reference key="NSSupport" ref="898061450"/>
 								<reference key="NSControlView" ref="537431872"/>
-								<int key="NSButtonFlags">-2034482945</int>
+								<int key="NSButtonFlags">-2034351873</int>
 								<int key="NSButtonFlags2">129</int>
 								<object class="NSCustomResource" key="NSNormalImage">
 									<string key="NSClassName">NSImage</string>
@@ -1585,7 +1585,7 @@
 								<string key="NSContents">Abort</string>
 								<reference key="NSSupport" ref="898061450"/>
 								<reference key="NSControlView" ref="993537246"/>
-								<int key="NSButtonFlags">-2034482945</int>
+								<int key="NSButtonFlags">-2034351873</int>
 								<int key="NSButtonFlags2">129</int>
 								<object class="NSCustomResource" key="NSNormalImage">
 									<string key="NSClassName">NSImage</string>
@@ -1665,7 +1665,7 @@
 													<string>public.url</string>
 												</object>
 											</object>
-											<string key="NSFrameSize">{562, 14}</string>
+											<string key="NSFrameSize">{562, 17}</string>
 											<reference key="NSSuperview" ref="88467857"/>
 											<object class="NSTextContainer" key="NSTextContainer" id="18574088">
 												<object class="NSLayoutManager" key="NSLayoutManager">
@@ -1744,7 +1744,7 @@
 											<nil key="NSDelegate"/>
 										</object>
 									</object>
-									<string key="NSFrameSize">{562, 210}</string>
+									<string key="NSFrameSize">{562, 213}</string>
 									<reference key="NSSuperview" ref="350210826"/>
 									<reference key="NSNextKeyView" ref="149599976"/>
 									<reference key="NSDocView" ref="149599976"/>
@@ -1758,7 +1758,7 @@
 								<object class="NSScroller" id="545696028">
 									<reference key="NSNextResponder" ref="350210826"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{562, 0}, {15, 210}}</string>
+									<string key="NSFrame">{{562, 0}, {15, 213}}</string>
 									<reference key="NSSuperview" ref="350210826"/>
 									<reference key="NSTarget" ref="350210826"/>
 									<string key="NSAction">_doScroller:</string>
@@ -1777,7 +1777,7 @@
 									<double key="NSPercent">0.94565218687057495</double>
 								</object>
 							</object>
-							<string key="NSFrame">{{20, 40}, {577, 210}}</string>
+							<string key="NSFrame">{{20, 37}, {577, 213}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSNextKeyView" ref="88467857"/>
 							<int key="NSsFlags">16</int>
@@ -1997,10 +1997,44 @@
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="410241135">
 								<int key="NSCellFlags">68288064</int>
-								<int key="NSCellFlags2">272630784</int>
+								<int key="NSCellFlags2">71304192</int>
 								<string key="NSContents">Set ffmpeg path</string>
 								<reference key="NSSupport" ref="898061450"/>
 								<reference key="NSControlView" ref="442234963"/>
+								<reference key="NSBackgroundColor" ref="895102220"/>
+								<reference key="NSTextColor" ref="227517796"/>
+							</object>
+						</object>
+						<object class="NSTextField" id="739213864">
+							<reference key="NSNextResponder" ref="50732426"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{127, 41}, {333, 22}}</string>
+							<reference key="NSSuperview" ref="50732426"/>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSTextFieldCell" key="NSCell" id="579469303">
+								<int key="NSCellFlags">-1804468671</int>
+								<int key="NSCellFlags2">272630784</int>
+								<string key="NSContents"/>
+								<reference key="NSSupport" ref="898061450"/>
+								<string key="NSPlaceholderString">perl executable path</string>
+								<reference key="NSControlView" ref="739213864"/>
+								<bool key="NSDrawsBackground">YES</bool>
+								<reference key="NSBackgroundColor" ref="682522856"/>
+								<reference key="NSTextColor" ref="910321828"/>
+							</object>
+						</object>
+						<object class="NSTextField" id="947718855">
+							<reference key="NSNextResponder" ref="50732426"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{17, 43}, {105, 17}}</string>
+							<reference key="NSSuperview" ref="50732426"/>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSTextFieldCell" key="NSCell" id="955356241">
+								<int key="NSCellFlags">68288064</int>
+								<int key="NSCellFlags2">71304192</int>
+								<string key="NSContents">Set perl path</string>
+								<reference key="NSSupport" ref="898061450"/>
+								<reference key="NSControlView" ref="947718855"/>
 								<reference key="NSBackgroundColor" ref="895102220"/>
 								<reference key="NSTextColor" ref="227517796"/>
 							</object>
@@ -2020,7 +2054,7 @@
 									<string>NeXT TIFF v4.0 pasteboard type</string>
 								</object>
 							</object>
-							<string key="NSFrame">{{20, 101}, {32, 32}}</string>
+							<string key="NSFrame">{{0, 121}, {32, 32}}</string>
 							<reference key="NSSuperview" ref="50732426"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSImageCell" key="NSCell" id="322801966">
@@ -2136,7 +2170,7 @@
 			<object class="NSUserDefaultsController" id="955192043">
 				<object class="NSMutableArray" key="NSDeclaredKeys">
 					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>ffmpegPath</string>
+					<string>perlPath</string>
 				</object>
 				<bool key="NSSharedInstance">YES</bool>
 			</object>
@@ -2343,22 +2377,6 @@
 						<reference key="destination" ref="708854459"/>
 					</object>
 					<int key="connectionID">357</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">saveDocument:</string>
-						<reference key="source" ref="1014"/>
-						<reference key="destination" ref="1023925487"/>
-					</object>
-					<int key="connectionID">362</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">saveDocumentAs:</string>
-						<reference key="source" ref="1014"/>
-						<reference key="destination" ref="117038363"/>
-					</object>
-					<int key="connectionID">363</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -3112,6 +3130,46 @@
 					</object>
 					<int key="connectionID">740</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: values.perlPath</string>
+						<reference key="source" ref="739213864"/>
+						<reference key="destination" ref="955192043"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="739213864"/>
+							<reference key="NSDestination" ref="955192043"/>
+							<string key="NSLabel">value: values.perlPath</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">values.perlPath</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">746</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">perlPath</string>
+						<reference key="source" ref="203473402"/>
+						<reference key="destination" ref="739213864"/>
+					</object>
+					<int key="connectionID">747</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">saveFileSavePanel:</string>
+						<reference key="source" ref="203473402"/>
+						<reference key="destination" ref="1023925487"/>
+					</object>
+					<int key="connectionID">748</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">saveFileSavePanel:</string>
+						<reference key="source" ref="203473402"/>
+						<reference key="destination" ref="117038363"/>
+					</object>
+					<int key="connectionID">749</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -3196,7 +3254,6 @@
 						<reference key="object" ref="720053764"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="1023925487"/>
 							<reference ref="117038363"/>
 							<reference ref="49223823"/>
 							<reference ref="722745758"/>
@@ -3207,13 +3264,9 @@
 							<reference ref="425164168"/>
 							<reference ref="579971712"/>
 							<reference ref="1010469920"/>
+							<reference ref="1023925487"/>
 						</object>
 						<reference key="parent" ref="379814623"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">75</int>
-						<reference key="object" ref="1023925487"/>
-						<reference key="parent" ref="720053764"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">80</int>
@@ -4402,9 +4455,11 @@
 						<reference key="object" ref="50732426"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="532715662"/>
 							<reference ref="25311555"/>
 							<reference ref="442234963"/>
+							<reference ref="739213864"/>
+							<reference ref="947718855"/>
+							<reference ref="532715662"/>
 						</object>
 						<reference key="parent" ref="974817961"/>
 					</object>
@@ -4628,6 +4683,39 @@
 						<int key="objectID">734</int>
 						<reference key="object" ref="553214567"/>
 						<reference key="parent" ref="492264857"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">741</int>
+						<reference key="object" ref="739213864"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="579469303"/>
+						</object>
+						<reference key="parent" ref="50732426"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">742</int>
+						<reference key="object" ref="947718855"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="955356241"/>
+						</object>
+						<reference key="parent" ref="50732426"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">743</int>
+						<reference key="object" ref="955356241"/>
+						<reference key="parent" ref="947718855"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">744</int>
+						<reference key="object" ref="579469303"/>
+						<reference key="parent" ref="739213864"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">75</int>
+						<reference key="object" ref="1023925487"/>
+						<reference key="parent" ref="720053764"/>
 					</object>
 				</object>
 			</object>
@@ -4948,8 +5036,16 @@
 					<string>72.ImportedFromIB2</string>
 					<string>73.IBPluginDependency</string>
 					<string>73.ImportedFromIB2</string>
+					<string>731.IBPluginDependency</string>
+					<string>732.IBPluginDependency</string>
+					<string>733.IBPluginDependency</string>
+					<string>734.IBPluginDependency</string>
 					<string>74.IBPluginDependency</string>
 					<string>74.ImportedFromIB2</string>
+					<string>741.IBPluginDependency</string>
+					<string>742.IBPluginDependency</string>
+					<string>743.IBPluginDependency</string>
+					<string>744.IBPluginDependency</string>
 					<string>75.IBPluginDependency</string>
 					<string>75.ImportedFromIB2</string>
 					<string>77.IBPluginDependency</string>
@@ -5296,7 +5392,15 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -5335,7 +5439,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">740</int>
+			<int key="maxID">749</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -5352,10 +5456,12 @@
 							<string>loadFileOpenPanel:</string>
 							<string>openAbout:</string>
 							<string>openPreferences:</string>
+							<string>saveFileSavePanel:</string>
 							<string>transcode:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -5373,6 +5479,7 @@
 							<string>loadFileOpenPanel:</string>
 							<string>openAbout:</string>
 							<string>openPreferences:</string>
+							<string>saveFileSavePanel:</string>
 							<string>transcode:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -5398,6 +5505,10 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
+								<string key="name">saveFileSavePanel:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
 								<string key="name">transcode:</string>
 								<string key="candidateClassName">id</string>
 							</object>
@@ -5413,8 +5524,10 @@
 							<string>aChanFieldIn</string>
 							<string>ffmpegPath</string>
 							<string>filenameField</string>
+							<string>folderNameField</string>
 							<string>heightField</string>
 							<string>heightFieldIn</string>
+							<string>perlPath</string>
 							<string>progressBar</string>
 							<string>textView</string>
 							<string>vBitRateField</string>
@@ -5424,6 +5537,8 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>NSTextField</string>
+							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
@@ -5450,8 +5565,10 @@
 							<string>aChanFieldIn</string>
 							<string>ffmpegPath</string>
 							<string>filenameField</string>
+							<string>folderNameField</string>
 							<string>heightField</string>
 							<string>heightFieldIn</string>
+							<string>perlPath</string>
 							<string>progressBar</string>
 							<string>textView</string>
 							<string>vBitRateField</string>
@@ -5486,11 +5603,19 @@
 								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">folderNameField</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">heightField</string>
 								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">heightFieldIn</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">perlPath</string>
 								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">

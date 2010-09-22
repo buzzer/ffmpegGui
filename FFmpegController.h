@@ -14,17 +14,19 @@
 	IBOutlet NSTextField *widthField;
 	IBOutlet NSTextField *heightField;	
 	IBOutlet NSTextField *filenameField;
+	IBOutlet NSTextField *folderNameField;
 	IBOutlet NSTextField *vBitRateField;
 	IBOutlet NSTextField *aBitRateField;
 	IBOutlet NSTextField *aChanField;
-//	IBOutlet NSTextField *widthFieldIn;
-//	IBOutlet NSTextField *heightFieldIn;	
-//	IBOutlet NSTextField *vBitRateFieldIn;
-//	IBOutlet NSTextField *aBitRateFieldIn;
-//	IBOutlet NSTextField *aChanFieldIn;
+	IBOutlet NSTextField *widthFieldIn;
+	IBOutlet NSTextField *heightFieldIn;	
+	IBOutlet NSTextField *vBitRateFieldIn;
+	IBOutlet NSTextField *aBitRateFieldIn;
+	IBOutlet NSTextField *aChanFieldIn;
 	IBOutlet NSTextView  *textView;
 	IBOutlet NSProgressIndicator *progressBar;
 	IBOutlet NSTextField *ffmpegPath;
+	IBOutlet NSTextField *perlPath;
 	FFmpegGui *ffmpeggui;
 }
 //@property (readwrite,copy) NSTextField* widthFieldIn;
@@ -36,6 +38,7 @@
 - (IBAction)getVideoPar:(id)sender;
 - (IBAction)transcode:(id)sender;
 - (IBAction)loadFileOpenPanel:(id)sender;
+- (IBAction)saveFileSavePanel:(id)sender;
 - (IBAction)interruptTranscode:(id)sender;
 - (void)textViewPrint:(NSString*)string;
 - (void)startProgressBar;
