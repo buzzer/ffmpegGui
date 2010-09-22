@@ -27,6 +27,7 @@
 	IBOutlet NSProgressIndicator *progressBar;
 	IBOutlet NSTextField *ffmpegPath;
 	IBOutlet NSTextField *perlPath;
+	IBOutlet NSPathControl *pathControlPath;
 	FFmpegGui *ffmpeggui;
 }
 //@property (readwrite,copy) NSTextField* widthFieldIn;

@@ -133,9 +133,6 @@
 	// us via the callback registered above when we signed up as an observer.  The file handle will
 	// send a NSFileHandleReadCompletionNotification when it has data that is available.
 	[[[transcodeTask1 standardOutput] fileHandleForReading] readInBackgroundAndNotify];
-	
-	//NSFileHandle *file;
-	//file = [pipe fileHandleForReading];
 
 	NSLog(@"Calling transcode with arguments: %@\n",transcodeArguments);
 
@@ -146,15 +143,6 @@
 	// launch the task asynchronously
 	[transcodeTask1 launch];
 	
-	//[transcodeTask1 waitUntilExit];
-	
-	//NSData *data;
-	//data = [file readDataToEndOfFile];
-	
-	//NSString *string;
-	//string = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-	//NSLog (@"%@", string);
-	//[controllerCB textViewPrint: string];
 }
 
 - (void) terminateTransTask {
@@ -174,15 +162,6 @@
 	NSLog(@"Terminating task: %@\n", self->transcodeTask1);
 	[controller stopProgressBar];
 	
-//	if ([self->transcodeTask1 isRunning]) {
-//  	[self->transcodeTask1 terminate];
-//		NSLog(@"Terminating task: %@\n", self->transcodeTask1);
-//		[controllerCB textViewPrint:@"Terminating task: %@\n", self->transcodeTask1];
-//	} else {
-//		NSLog(@"No task to abort\n");
-//		[controllerCB textViewPrint:@"No task to abort\n"];
-//	}
-//		[controllerCB stopProgressBar];
 }
 // This method is called asynchronously when data is available from the task's file handle.
 // We just pass the data along to the controller as an NSString.

@@ -17,10 +17,6 @@
 	}
 	// Register callback to model
 	[ffmpeggui setController:self];
-//	[textView toggleContinuousSpellChecking:(id)self];
-//	if ([self->textView isContinuousSpellCheckingEnabled]) {
-//		[self->textView setContinuousSpellCheckingEnabled:YES];
-//	}
 
 	return self;
 }
@@ -53,7 +49,7 @@
 	
 	result = [oPanel runModalForDirectory:NSHomeDirectory() file:nil types:fileTypes];
 	
-	if (result == NSOKButton) {
+	if (result == NSFileHandlingPanelOKButton) {
 		filesToOpen = [oPanel filenames];
 		theFileName = [filesToOpen objectAtIndex:0];
 		NSLog(@"Open Panel Returned: %@.\n", theFileName);
@@ -74,12 +70,12 @@
 	[sPanel setAllowsMultipleSelection:NO];
 	[sPanel setCanChooseFiles:NO];
 	[sPanel setCanChooseDirectories:YES];
-	[sPanel setTitle:@"Choose Output Directory"];
+	[sPanel setTitle:@"Choose output directory"];
 	
 	result = [sPanel runModal];
 	
 	if (result == NSFileHandlingPanelOKButton) {
-		theFolderName = [[[sPanel URLs] objectAtIndex:0] absoluteString];
+		theFolderName = [[[sPanel URLs] objectAtIndex:0] path];
 		
 		NSLog(@"Save Panel Returned: %@.\n", theFolderName);
 		
@@ -87,6 +83,7 @@
 		[self textViewPrint:[NSString stringWithFormat:@"Output folder: %@\n",theFolderName]];
 		// Display opened filepath
 		[folderNameField setStringValue:theFolderName];
+		[pathControlPath setURL:[[sPanel URLs] objectAtIndex:0]];
 	}
 }
 - (IBAction) interruptTranscode:(id)sender {
