@@ -45,7 +45,6 @@
 	
 	[oPanel setAllowsMultipleSelection:NO];
 	[oPanel setTitle:@"Choose Video File"];
-	//[oPanel setMessage:@"Choose video to convert to the target format."];
 	
 	result = [oPanel runModalForDirectory:NSHomeDirectory() file:nil types:fileTypes];
 	
@@ -71,6 +70,7 @@
 	[sPanel setCanChooseFiles:NO];
 	[sPanel setCanChooseDirectories:YES];
 	[sPanel setTitle:@"Choose output directory"];
+	[sPanel setDirectoryURL:[NSURL URLWithString:[NSHomeDirectory() stringByAppendingPathComponent:@"Desktop"]]];
 	
 	result = [sPanel runModal];
 	
@@ -90,14 +90,18 @@
 	[ffmpeggui terminateTransTask];
 }
 - (void) awakeFromNib {
-	NSCalendarDate *now;
-	now = [NSCalendarDate calendarDate];
-	[textView insertText:[NSString stringWithFormat:@"%@\n",now]];
+	NSString* theFolderName = [NSHomeDirectory() stringByAppendingPathComponent:@"Desktop"];
+	NSCalendarDate *now = [NSCalendarDate calendarDate];
+	
+	[self textViewPrint:[NSString stringWithFormat:@"%@\n",now]];
 	[widthField setIntegerValue:[ffmpeggui videoWidthStd]];
 	[heightField setIntegerValue:[ffmpeggui videoHeightStd]];
 	[vBitRateField setIntegerValue:512];
 	[aBitRateField setIntegerValue:96];
 	[aChanField setIntegerValue:2];
+	// Set default output directory
+	[pathControlPath setURL:[NSURL URLWithString:theFolderName]];
+	[ffmpeggui setOutVFile:theFolderName];
 }
 - (void) textViewPrint:(NSString*) string {
 	[textView setEditable:YES];

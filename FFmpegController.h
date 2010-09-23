@@ -28,23 +28,21 @@
 	IBOutlet NSTextField *ffmpegPath;
 	IBOutlet NSTextField *perlPath;
 	IBOutlet NSPathControl *pathControlPath;
+	IBOutlet NSToolbar *toolBar;
+	IBOutlet NSToolbarItem *toolBarStart;
+	IBOutlet NSToolbarItem *toolBarStop;
 	FFmpegGui *ffmpeggui;
 }
-//@property (readwrite,copy) NSTextField* widthFieldIn;
-//@property (readwrite,copy) NSTextField* heightFieldIn;
-//@property (readwrite,copy) NSTextField* vBitRateFieldIn;
-//@property (readwrite,copy) NSTextField* aBitRateFieldIn;
-//@property (readwrite,copy) NSTextField* aChanFieldIn;
 
 - (IBAction)getVideoPar:(id)sender;
 - (IBAction)transcode:(id)sender;
 - (IBAction)loadFileOpenPanel:(id)sender;
 - (IBAction)saveFileSavePanel:(id)sender;
 - (IBAction)interruptTranscode:(id)sender;
+- (IBAction) openPreferences:(id)sender;
+- (IBAction) openAbout:(id)sender;
 - (void)textViewPrint:(NSString*)string;
 - (void)startProgressBar;
 - (void)stopProgressBar;
-- (IBAction) openPreferences:(id)sender;
-- (IBAction) openAbout:(id)sender;
 
 @end
