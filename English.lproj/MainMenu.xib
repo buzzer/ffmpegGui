@@ -12,9 +12,9 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="824"/>
 			<integer value="645"/>
 			<integer value="639"/>
-			<integer value="371"/>
 			<integer value="29"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -2397,8 +2397,8 @@
 												<int key="NSCellFlags2">272629760</int>
 												<string key="NSContents"/>
 												<reference key="NSSupport" ref="898061450"/>
+												<string key="NSPlaceholderString">Format Info</string>
 												<reference key="NSControlView" ref="1015267346"/>
-												<bool key="NSDrawsBackground">YES</bool>
 												<reference key="NSBackgroundColor" ref="682522856"/>
 												<reference key="NSTextColor" ref="910321828"/>
 											</object>
@@ -3960,6 +3960,30 @@
 						<reference key="destination" ref="1071349896"/>
 					</object>
 					<int key="connectionID">812</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">inFileProperties</string>
+						<reference key="source" ref="203473402"/>
+						<reference key="destination" ref="1015267346"/>
+					</object>
+					<int key="connectionID">868</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">vBitRateSlider</string>
+						<reference key="source" ref="203473402"/>
+						<reference key="destination" ref="1025568378"/>
+					</object>
+					<int key="connectionID">869</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">aBitRateSlider</string>
+						<reference key="source" ref="203473402"/>
+						<reference key="destination" ref="485108581"/>
+					</object>
+					<int key="connectionID">870</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -6340,7 +6364,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>{{525, 802}, {197, 73}}</string>
-					<string>{{317, 736}, {534, 20}}</string>
+					<string>{{331, 635}, {534, 20}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>{74, 862}</string>
@@ -6365,9 +6389,9 @@
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
-					<string>{{319, 173}, {617, 451}}</string>
+					<string>{{292, 47}, {617, 451}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{319, 173}, {617, 451}}</string>
+					<string>{{292, 47}, {617, 451}}</string>
 					<integer value="1"/>
 					<string>{{33, 99}, {480, 360}}</string>
 					<boolean value="NO"/>
@@ -6659,7 +6683,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">867</int>
+			<int key="maxID">870</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -6740,6 +6764,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>aBitRateField</string>
 							<string>aBitRateFieldIn</string>
+							<string>aBitRateSlider</string>
 							<string>aChanField</string>
 							<string>aChanFieldIn</string>
 							<string>ffmpegPath</string>
@@ -6747,6 +6772,7 @@
 							<string>folderNameField</string>
 							<string>heightField</string>
 							<string>heightFieldIn</string>
+							<string>inFileProperties</string>
 							<string>pathControlPath</string>
 							<string>perlPath</string>
 							<string>progressBar</string>
@@ -6756,12 +6782,15 @@
 							<string>toolBarStop</string>
 							<string>vBitRateField</string>
 							<string>vBitRateFieldIn</string>
+							<string>vBitRateSlider</string>
 							<string>widthField</string>
 							<string>widthFieldIn</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSTextField</string>
+							<string>NSTextField</string>
+							<string>NSSlider</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
@@ -6779,6 +6808,7 @@
 							<string>NSToolbarItem</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
+							<string>NSSlider</string>
 							<string>NSTextField</string>
 							<string>NSTextField</string>
 						</object>
@@ -6789,6 +6819,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>aBitRateField</string>
 							<string>aBitRateFieldIn</string>
+							<string>aBitRateSlider</string>
 							<string>aChanField</string>
 							<string>aChanFieldIn</string>
 							<string>ffmpegPath</string>
@@ -6796,6 +6827,7 @@
 							<string>folderNameField</string>
 							<string>heightField</string>
 							<string>heightFieldIn</string>
+							<string>inFileProperties</string>
 							<string>pathControlPath</string>
 							<string>perlPath</string>
 							<string>progressBar</string>
@@ -6805,6 +6837,7 @@
 							<string>toolBarStop</string>
 							<string>vBitRateField</string>
 							<string>vBitRateFieldIn</string>
+							<string>vBitRateSlider</string>
 							<string>widthField</string>
 							<string>widthFieldIn</string>
 						</object>
@@ -6817,6 +6850,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">aBitRateFieldIn</string>
 								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">aBitRateSlider</string>
+								<string key="candidateClassName">NSSlider</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">aChanField</string>
@@ -6844,6 +6881,10 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">heightFieldIn</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">inFileProperties</string>
 								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
@@ -6881,6 +6922,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">vBitRateFieldIn</string>
 								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">vBitRateSlider</string>
+								<string key="candidateClassName">NSSlider</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">widthField</string>

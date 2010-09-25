@@ -39,7 +39,7 @@
 		NSLog(@"Task succeeded.");
 	else
 		NSLog(@"Task failed.");
-		[controller stopProgressBar];
+		[controller taskFinished];
 }
 
 - (void) getVideoPar {
@@ -92,6 +92,7 @@
 	audioChannel = [[videoPar objectAtIndex:2] intValue];
 	audioBitRate = [[videoPar objectAtIndex:3] intValue];
 //	NSArray* videoParameter = [[[NSArray alloc] init] addObject:<#(id)anObject#> ];
+	[controller setFormatProperties:(NSArray*)[[NSArray alloc] initWithObjects:string, nil]];
 }
 
 - (void) startTranscode {
@@ -136,7 +137,7 @@
 
 	NSLog(@"Calling transcode with arguments: %@\n",transcodeArguments);
 
-	[controller startProgressBar];
+	[controller taskStarted];
 	// Redirect output to stdout
 	//[transcodeTask1 setStandardInput:[NSPipe pipe]];
 
@@ -160,7 +161,7 @@
 	}
 
 	NSLog(@"Terminating task: %@\n", self->transcodeTask1);
-	[controller stopProgressBar];
+	[controller taskFinished];
 	
 }
 // This method is called asynchronously when data is available from the task's file handle.

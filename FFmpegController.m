@@ -31,9 +31,9 @@
 	[ffmpeggui startTranscode];
 }
 
-- (IBAction) getVideoPar:(id)sender {
-	[ffmpeggui getVideoPar];
-}
+//- (IBAction) getVideoPar:(id)sender {
+//	[ffmpeggui getVideoPar];
+//}
 
 - (IBAction)loadFileOpenPanel:(id)sender {
 	int result;
@@ -109,16 +109,23 @@
 	[textView insertText:string];
 	[textView setEditable:NO];
 }
-- (void) startProgressBar {
+- (void) taskStarted {
 	[progressBar startAnimation:self];
 }
-- (void) stopProgressBar {
+- (void) taskFinished {
 	[progressBar stopAnimation:self];
 }
 - (IBAction) openPreferences:(id)sender {
-	
+	;
 }
 - (IBAction) openAbout:(id)sender {
-	
+	;
+}
+- (void) setFormatProperties:(NSArray*)propertyArray {
+	NSMutableString *trackFormatStr = [NSMutableString string];
+	[trackFormatStr appendFormat:@"%@",[propertyArray objectAtIndex:0]];
+	[inFileProperties setEditable:YES];
+	[inFileProperties	setStringValue:trackFormatStr];
+	[inFileProperties setEditable:NO];
 }
 @end

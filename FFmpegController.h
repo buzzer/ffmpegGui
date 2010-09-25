@@ -31,10 +31,13 @@
 	IBOutlet NSToolbar *toolBar;
 	IBOutlet NSToolbarItem *toolBarStart;
 	IBOutlet NSToolbarItem *toolBarStop;
+	IBOutlet NSSlider *vBitRateSlider;
+	IBOutlet NSSlider *aBitRateSlider;
+	IBOutlet NSTextField *inFileProperties;
 	FFmpegGui *ffmpeggui;
 }
 
-- (IBAction)getVideoPar:(id)sender;
+//- (IBAction)getVideoPar:(id)sender;
 - (IBAction)transcode:(id)sender;
 - (IBAction)loadFileOpenPanel:(id)sender;
 - (IBAction)saveFileSavePanel:(id)sender;
@@ -42,7 +45,10 @@
 - (IBAction) openPreferences:(id)sender;
 - (IBAction) openAbout:(id)sender;
 - (void)textViewPrint:(NSString*)string;
-- (void)startProgressBar;
-- (void)stopProgressBar;
+//- (void)startProgressBar;
+//- (void)stopProgressBar;
+- (void)setFormatProperties:(NSArray*)propertyArray;
+- (void)taskStarted;
+- (void)taskFinished;
 
 @end
