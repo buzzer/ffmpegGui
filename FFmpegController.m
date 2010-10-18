@@ -14,9 +14,9 @@
 - (id) init {
 	if (self = [super init]){
 		self->ffmpeggui = [[FFmpegGui alloc] init];
+		// Register callback to model
+		[ffmpeggui setController:self];
 	}
-	// Register callback to model
-	[ffmpeggui setController:self];
 
 	return self;
 }
