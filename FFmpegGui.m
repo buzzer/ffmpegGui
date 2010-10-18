@@ -91,8 +91,11 @@
 	audioSRate = [[videoPar objectAtIndex:1] intValue];
 	audioChannel = [[videoPar objectAtIndex:2] intValue];
 	audioBitRate = [[videoPar objectAtIndex:3] intValue];
-//	NSArray* videoParameter = [[[NSArray alloc] init] addObject:<#(id)anObject#> ];
-	[controller setFormatProperties:(NSArray*)[[NSArray alloc] initWithObjects:string, nil]];
+	// Notify Controller about format infos
+	[controller setFormatProperties:(NSArray*)[[NSArray alloc] initWithObjects:
+														@"Resolution, audio sampling, audio channels, audio bitrate: ",
+														string,
+														nil ]];
 }
 
 - (void) startTranscode {

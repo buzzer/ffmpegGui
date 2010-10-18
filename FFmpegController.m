@@ -123,7 +123,12 @@
 }
 - (void) setFormatProperties:(NSArray*)propertyArray {
 	NSMutableString *trackFormatStr = [NSMutableString string];
-	[trackFormatStr appendFormat:@"%@",[propertyArray objectAtIndex:0]];
+	NSEnumerator *enumerator = [propertyArray objectEnumerator];
+	id anStringObject;
+	
+	while (anStringObject = [enumerator nextObject]) {
+		[trackFormatStr appendFormat:@"%@", anStringObject];
+	}
 	[inFileProperties setEditable:YES];
 	[inFileProperties	setStringValue:trackFormatStr];
 	[inFileProperties setEditable:NO];
